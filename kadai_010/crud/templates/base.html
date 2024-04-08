@@ -17,14 +17,7 @@
                     <span class="navbar-text">
                         ようこそ {{ user.get_username }} さん
                     </span>
-                    <form action="/logout/" method="post">
-                        {% csrf_token %}
-                        <input type="submit" value="ログアウト">
-                    </form>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">ログイン</a>
-                    </li>
                     {% endif %}
                 </ul>
             </div>
